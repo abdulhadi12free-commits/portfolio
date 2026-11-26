@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server-Side Tracking & CRO Specialist | Data & Analytics Engineer</title>
+    <meta name="description" content="Portfolio of Server-Side Tracking, Cloudflare Custom Proxy, Google Ads Offline Conversions (OCT), and Conversion Rate Optimization (CRO) Expert.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            accent: '#06b6d4',
+                            orange: '#f97316'
+                        },
+                        dark: {
+                            900: '#0B0F19',
+                            800: '#111827',
+                            700: '#1F2937',
+                            card: '#131B2E',
+                            border: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Lucide Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #070B14;
+            color: #E2E8F0;
+        }
+        .glow-radial {
+            background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.15) 0%, rgba(6, 182, 212, 0.05) 45%, transparent 70%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.25);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 50%, #A78BFA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-orange {
+            background: linear-gradient(135deg, #FB923C 0%, #F97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Glow Header Effect -->
+    <div class="fixed top-0 left-0 right-0 h-96 glow-radial pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-dark-900/80 border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2.5">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center font-bold text-white shadow-lg shadow-brand-500/20">
+                    <i data-lucide="activity" class="w-5 h-5"></i>
+                </div>
+                <span class="font-bold text-lg tracking-tight text-white">Tracking<span class="text-brand-400">Architect</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#services" class="hover:text-brand-400 transition-colors">Core Solutions</a>
+                <a href="#architecture" class="hover:text-brand-400 transition-colors">Cloudflare Architecture</a>
+                <a href="#offline-conversions" class="hover:text-brand-400 transition-colors">Google Ads OCT</a>
+                <a href="#cro" class="hover:text-brand-400 transition-colors">CRO Framework</a>
+                <a href="#case-studies" class="hover:text-brand-400 transition-colors">Case Studies</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 shadow-md shadow-brand-600/30 transition-all">
+                    <span>Audit My Tracking</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-xs sm:text-sm font-mono mb-6 backdrop-blur">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span>iOS 14+ / Safari ITP / AdBlocker Resilient Tracking Engine</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-tight sm:leading-none">
+                Stop Losing 30%+ Conversion Data. <br class="hidden sm:inline">
+                <span class="gradient-text">Server-Side Tracking & Full-Funnel CRO</span>
+            </h1>
+
+            <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                I help modern brands, e-commerce stores, and high-ticket lead gen businesses recover attribution loss with <span class="text-slate-200 font-semibold">Cloudflare Edge Proxies</span>, <span class="text-slate-200 font-semibold">Server-Side GTM</span>, <span class="text-slate-200 font-semibold">Google Ads Offline Conversions</span>, and data-driven <span class="text-slate-200 font-semibold">CRO</span>.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-white bg-gradient-to-r from-brand-600 to-blue-500 hover:from-brand-500 hover:to-blue-400 shadow-lg shadow-brand-600/25 flex items-center justify-center space-x-2 transition-all">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    <span>Get Free Tracking & CRO Audit</span>
+                </a>
+                <a href="#case-studies" class="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold text-slate-300 bg-dark-card border border-dark-border hover:bg-slate-800/60 hover:text-white transition-all flex items-center justify-center space-x-2">
+                    <i data-lucide="layers" class="w-5 h-5"></i>
+                    <span>Explore Real Client Results</span>
+                </a>
+            </div>
+
+            <!-- Trust / Metrics Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-8 border-t border-slate-800/80">
+                <div class="p-4 rounded-xl bg-dark-card/60 border border-dark-border">
+                    <div class="text-3xl font-extrabold text-brand-400 font-mono">99.2%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Data Match & Accuracy Rate</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card/60 border border-dark-border">
+                    <div class="text-3xl font-extrabold text-emerald-400 font-mono">+25-40%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Recovered Ad Attribution</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card/60 border border-dark-border">
+                    <div class="text-3xl font-extrabold text-cyan-400 font-mono">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">1st-Party Cookie Compliance</div>
+                </div>
+                <div class="p-4 rounded-xl bg-dark-card/60 border border-dark-border">
+                    <div class="text-3xl font-extrabold text-purple-400 font-mono">3.8x</div>
+                    <div class="text-xs sm:text-sm text-slate-400 mt-1">Average ROAS Optimization</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services / Core Competencies -->
+    <section id="services" class="py-20 bg-dark-900/60 border-t border-b border-dark-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-brand-400 font-mono font-semibold">Specialized Expertise</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Engineered for Maximum Attribution & Conversion Rate</p>
+                <p class="mt-4 text-slate-400">Traditional client-side pixel tracking is dead due to iOS 14, Brave/uBlock ad blockers, and Safari ITP 7-day cookie expiration. Here is how I solve it.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1: Server-Side Tracking -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-brand-400 flex items-center justify-center mb-5 border border-blue-500/20">
+                            <i data-lucide="server" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Server-Side Tracking (sGTM)</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Setup server container (Google Cloud Platform / Stape) to send clean, deduplicated events directly from server to ad platforms.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400 mr-2 flex-shrink-0"></i> Meta CAPI (Conversion API)</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400 mr-2 flex-shrink-0"></i> GA4 Server-Side Measurement</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400 mr-2 flex-shrink-0"></i> TikTok Events API & Pinterest CAPI</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400 mr-2 flex-shrink-0"></i> Event Deduplication (Event ID)</li>
+                        </ul>
+                    </div>
+                    <span class="inline-block text-xs font-mono text-brand-400 bg-brand-500/10 px-2.5 py-1 rounded w-fit">99%+ Event Match Quality</span>
+                </div>
+
+                <!-- Service 2: Cloudflare Server-Side Tracking -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Cloudflare Edge & Custom Proxy</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Deploy custom domain proxying via Cloudflare Workers & DNS rules. Turn 3rd-party ad scripts into native 1st-party requests.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400 mr-2 flex-shrink-0"></i> Custom Subdomain / Proxy Routing</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400 mr-2 flex-shrink-0"></i> Bypass AdBlockers & Brave Shields</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400 mr-2 flex-shrink-0"></i> Extend Safari ITP Cookie Life (2 yrs)</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400 mr-2 flex-shrink-0"></i> Ultra-low Latency Edge Processing</li>
+                        </ul>
+                    </div>
+                    <span class="inline-block text-xs font-mono text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded w-fit">Bypass AdBlock 100%</span>
+                </div>
+
+                <!-- Service 3: Google Ads Offline Conversions -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+                            <i data-lucide="target" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Google Ads Offline (OCT)</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Feed real revenue, closed-won deals, and qualified phone/CRM leads back into Google Smart Bidding algorithms.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 mr-2 flex-shrink-0"></i> GCLID, GBRAID, WBRAID Capture</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 mr-2 flex-shrink-0"></i> Enhanced Conversions for Leads</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 mr-2 flex-shrink-0"></i> CRM Sync (HubSpot, Zoho, Salesforce)</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 mr-2 flex-shrink-0"></i> Value-Based Bidding Optimization</li>
+                        </ul>
+                    </div>
+                    <span class="inline-block text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded w-fit">Closed-Loop ROAS</span>
+                </div>
+
+                <!-- Service 4: CRO Optimization -->
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Conversion Rate Opt. (CRO)</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                            Transform high-intent traffic into paying customers through behavioral analytics, UX friction elimination, and AB tests.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mr-2 flex-shrink-0"></i> GA4 Funnel Exploration & Drop-offs</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mr-2 flex-shrink-0"></i> Heatmap & Session Replay Analysis</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mr-2 flex-shrink-0"></i> Checkout & Form Friction Removal</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mr-2 flex-shrink-0"></i> A/B Testing Hypotheses & Roadmap</li>
+                        </ul>
+                    </div>
+                    <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded w-fit">+20% to +60% Lift</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloudflare & Tracking Architecture Deep Dive -->
+    <section id="architecture" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-brand-400 font-mono font-semibold">Technical Architecture</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">How Cloudflare Edge Proxy Prevents Tracking Loss</h2>
+                    <p class="text-slate-400 leading-relaxed">
+                        When you track on the client side, browser ad-blockers and privacy shields immediately block `google-analytics.com` or `connect.facebook.net`. 
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        By routing web requests through <span class="text-white font-medium">Cloudflare Workers</span> and a custom subdomain (e.g. <code class="text-brand-400 bg-slate-800 px-1.5 py-0.5 rounded text-sm">metrics.yourbrand.com</code>), the tracking scripts are served as first-party assets.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">First-Party HTTP-Only Cookie Setting</h4>
+                                <p class="text-xs text-slate-400">Protects <code class="text-slate-300">_fbp</code>, <code class="text-slate-300">_ga</code>, and custom visitor IDs from Safari's 7-day ITP deletion, allowing 30 to 180-day attribution windows.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">AdBlock & DNS-Level Shield Evasion</h4>
+                                <p class="text-xs text-slate-400">Cloaks script endpoints (`gtm.js`) using random obfuscated endpoints, rendering uBlock, AdBlock Plus, and Brave Shields completely ineffective.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i data-lucide="check" class="w-4 h-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold text-sm">Site Speed & Core Web Vitals Protection</h4>
+                                <p class="text-xs text-slate-400">Heavy JavaScript code runs on Cloudflare Edge and sGTM nodes, reducing client CPU load and accelerating Largest Contentful Paint (LCP).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Architecture Card -->
+                <div class="lg:col-span-6 bg-dark-card border border-dark-border rounded-2xl p-6 sm:p-8 relative shadow-2xl">
+                    <div class="flex items-center justify-between pb-4 border-b border-dark-border mb-6">
+                        <span class="text-xs font-mono text-slate-400 flex items-center">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 mr-2"></span>
+                            Live Data Flow Simulation
+                        </span>
+                        <span class="text-xs font-mono text-brand-400">End-to-End Encrypted</span>
+                    </div>
+
+                    <!-- Flow Diagram -->
+                    <div class="space-y-4 font-mono text-xs">
+                        
+                        <!-- Step 1 -->
+                        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="monitor" class="w-5 h-5 text-slate-400"></i>
+                                <div>
+                                    <div class="text-white font-semibold">User Browser (Visitor)</div>
+                                    <div class="text-[11px] text-slate-400">Fires PageView / AddToCart / Lead</div>
+                                </div>
+                            </div>
+                            <span class="text-amber-400 text-[10px] bg-amber-500/10 px-2 py-0.5 rounded">AdBlock Active</span>
+                        </div>
+
+                        <div class="flex justify-center text-slate-600">
+                            <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="p-3.5 rounded-xl bg-brand-950/40 border border-brand-500/30 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="cloud-lightning" class="w-5 h-5 text-brand-400"></i>
+                                <div>
+                                    <div class="text-brand-300 font-semibold">Cloudflare Edge Worker / Custom Proxy</div>
+                                    <div class="text-[11px] text-slate-400">Rewrites Request As First-Party | Sets HTTP Cookie</div>
+                                </div>
+                            </div>
+                            <span class="text-emerald-400 text-[10px] bg-emerald-500/10 px-2 py-0.5 rounded">100% Passed</span>
+                        </div>
+
+                        <div class="flex justify-center text-slate-600">
+                            <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="cpu" class="w-5 h-5 text-purple-400"></i>
+                                <div>
+                                    <div class="text-white font-semibold">Server-Side GTM Container (sGTM)</div>
+                                    <div class="text-[11px] text-slate-400">Enriches Payload (User Data, Hashing, Normalization)</div>
+                                </div>
+                            </div>
+                            <span class="text-purple-400 text-[10px] bg-purple-500/10 px-2 py-0.5 rounded">Event Deduplication</span>
+                        </div>
+
+                        <div class="flex justify-center text-slate-600">
+                            <i data-lucide="arrow-down" class="w-4 h-4 animate-bounce"></i>
+                        </div>
+
+                        <!-- Step 4 Destination APIs -->
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="p-2.5 rounded-lg bg-blue-900/30 border border-blue-500/30 text-center">
+                                <div class="font-bold text-white text-[11px]">Meta CAPI</div>
+                                <div class="text-[10px] text-emerald-400 mt-1">EMQ: 9.4/10</div>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-emerald-900/30 border border-emerald-500/30 text-center">
+                                <div class="font-bold text-white text-[11px]">Google Ads</div>
+                                <div class="text-[10px] text-emerald-400 mt-1">Enhanced Conv.</div>
+                            </div>
+                            <div class="p-2.5 rounded-lg bg-orange-900/30 border border-orange-500/30 text-center">
+                                <div class="font-bold text-white text-[11px]">GA4 Server</div>
+                                <div class="text-[10px] text-emerald-400 mt-1">100% Clean Data</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Ads Offline Conversion Tracking (OCT) Section -->
+    <section id="offline-conversions" class="py-20 bg-dark-900/60 border-t border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs uppercase tracking-widest text-emerald-400 font-mono font-semibold">High-Intent Lead Gen & Sales Precision</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Google Ads Offline Conversion Tracking (OCT)</h2>
+                <p class="mt-4 text-slate-400 leading-relaxed">
+                    Most companies optimize Google Ads for shallow "form fills" and get junk leads. With Offline Conversion Tracking, we train Google's Smart Bidding algorithm on <span class="text-emerald-400 font-semibold">actual sales, closed deals, and revenue</span> that happen in your CRM days or weeks later.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono font-bold mb-4">01</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Identifier Capture & Storage</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Accurately capture <span class="text-slate-200">GCLID</span>, <span class="text-slate-200">GBRAID</span>, and <span class="text-slate-200">WBRAID</span> parameters on landing pages and safely store them in hidden form fields and CRM contact records.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono font-bold mb-4">02</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Enhanced Conversions for Leads</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Hash customer first-party data (SHA-256 email, phone number, address) automatically to enable offline matching even when cookie identifiers are missing or iOS-restricted.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono font-bold mb-4">03</div>
+                    <h3 class="text-lg font-bold text-white mb-2">CRM Pipeline & Revenue Sync</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Automate periodic or webhook-based conversion uploads from HubSpot, Salesforce, Zoho, or Google Sheets directly to Google Ads conversion goals (Qualified Lead, Closed Won).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Value Comparison -->
+            <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-emerald-950/30 to-dark-card border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h4 class="text-lg font-bold text-white">The Outcome: Google Ads Value-Based Bidding (tROAS)</h4>
+                    <p class="text-sm text-slate-300 mt-1">Google stops bidding on tire-kickers and focuses 100% of budget on high-ticket buyers who actually close.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30">
+                        <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
+                        Avg. +45% Qualified Pipeline Value
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CRO Framework Section -->
+    <section id="cro" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-purple-400 font-mono font-semibold">CRO Framework</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Conversion Rate Optimization Backed By Cold Hard Data</h2>
+                <p class="mt-4 text-slate-400">Tracking without optimization is just numbers. I combine server-side analytics precision with behavioral psychology to double conversion rates.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="git-commit" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Quantitative Funnel Audit</h3>
+                    <p class="text-sm text-slate-400">
+                        Granular step-by-step GA4 funnel exploration. We isolate exactly which step (Product Page → Add to Cart → Shipping → Payment) is hemorrhaging high-value shoppers.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="mouse-pointer" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Qualitative User Replays</h3>
+                    <p class="text-sm text-slate-400">
+                        Heatmaps, scroll maps, and session recordings via Microsoft Clarity & Hotjar to uncover rage clicks, form field abandonment, and hidden mobile layout bugs.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="sliders" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Frictionless Checkout Design</h3>
+                    <p class="text-sm text-slate-400">
+                        1-page checkout flows, autofill optimization, express payments (Apple Pay / Google Pay / Shop Pay), and prominent trust badges that eliminate buyer hesitation.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Speed & Page Experience</h3>
+                    <p class="text-sm text-slate-400">
+                        Every 100ms delay drops conversions by 7%. Offloading tracking tags to the server drastically improves Time to Interactive (TTI) and Mobile responsiveness.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="copy-check" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Persuasive Copy & Value Props</h3>
+                    <p class="text-sm text-slate-400">
+                        Refining headline hooks, customer risk-reversal guarantees, social proof popups, and urgency drivers tailored specifically to the landing page traffic source.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-dark-card border border-dark-border">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="split" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Scientific A/B Testing</h3>
+                    <p class="text-sm text-slate-400">
+                        Statistical significance testing. We never guess or rely on gut feeling. Every change is tested against a control group to prove true conversion lift.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Case Studies -->
+    <section id="case-studies" class="py-20 bg-dark-900/60 border-t border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-brand-400 font-mono font-semibold">Proven Track Record</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Real Case Studies & Measurable Wins</h2>
+            </div>
+
+            <div class="space-y-8">
+                
+                <!-- Case Study 1 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-dark-card border border-dark-border hover:border-brand-500/40 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-dark-border">
+                        <div>
+                            <span class="text-xs font-mono text-brand-400 uppercase tracking-wider">E-Commerce Fashion Brand ($1.2M/yr)</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Recovered 34% Missing Meta Purchases with Cloudflare + sGTM</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full">Shopify Plus</span>
+                            <span class="text-xs font-mono bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full">Cloudflare Workers</span>
+                            <span class="text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-full">Meta CAPI (EMQ 9.2)</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Challenge</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Over 30% of iOS buyers were completely invisible in Meta Ads Manager. Client's reported ROAS was dropping from 3.2x to 1.9x, prompting the client to pause profitable ad sets prematurely.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Solution</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Implemented sGTM hosted on custom domain via Cloudflare proxy. Configured deduplicated browser + server events with advanced customer matching (hashed email, phone, IP, user agent).
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <h4 class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Results & Impact</h4>
+                            <ul class="text-xs text-slate-300 space-y-2">
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1.5"></i> +34% Attributed Purchases in Meta</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="check" class="w-3.5 h-3.5 mr-1.5"></i> Event Match Quality jumped to 9.2/10</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="dollar-sign" class="w-3.5 h-3.5 mr-1.5"></i> Blended ROAS scaled back up to 3.4x</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-dark-card border border-dark-border hover:border-emerald-500/40 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-dark-border">
+                        <div>
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">B2B Financial Services & SaaS</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Google Ads Offline Conversion Sync Eliminating 62% Junk Leads</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full">Google Ads OCT</span>
+                            <span class="text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full">HubSpot CRM</span>
+                            <span class="text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-full">GCLID & Enhanced Conv.</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Challenge</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Google Smart Bidding was optimizing for cheap form submissions, flooding the sales team with unqualified leads and spam. Cost per closed deal was reaching an unsustainable $1,400.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Solution</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Setup GCLID/GBRAID hidden fields and configured automated HubSpot-to-Google Ads offline conversion dispatching whenever a contact status moved to "Sales Qualified Lead" and "Deal Closed-Won".
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <h4 class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Results & Impact</h4>
+                            <ul class="text-xs text-slate-300 space-y-2">
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1.5"></i> -54% Cost Per Qualified Opportunity</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="check" class="w-3.5 h-3.5 mr-1.5"></i> Value-based bidding enabled in Google Ads</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="dollar-sign" class="w-3.5 h-3.5 mr-1.5"></i> $180k+ pipeline generated in 90 days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-dark-card border border-dark-border hover:border-purple-500/40 transition-all">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-dark-border">
+                        <div>
+                            <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Health & Wellness Supplements Brand</span>
+                            <h3 class="text-2xl font-bold text-white mt-1">Full CRO Overhaul Boosts Checkout Conversion Rate from 1.7% to 2.85%</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-full">CRO & A/B Testing</span>
+                            <span class="text-xs font-mono bg-pink-500/10 text-pink-400 border border-pink-500/20 px-3 py-1 rounded-full">GA4 Exploration</span>
+                            <span class="text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full">Clarity Heatmaps</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Challenge</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Mobile traffic was generating 75% of clicks but had a dismal 1.2% conversion rate. Users were abandoning carts at the payment screen due to unexpected shipping fees and slow script loading.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">The Solution</h4>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Streamlined mobile checkout, added free shipping progress bar, introduced 1-click Express Checkout, and offloaded 11 heavy client-side marketing tags to server container for 1.8s speed boost.
+                            </p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+                            <h4 class="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-2">Results & Impact</h4>
+                            <ul class="text-xs text-slate-300 space-y-2">
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="trending-up" class="w-3.5 h-3.5 mr-1.5"></i> Storewide CR increased from 1.70% to 2.85%</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="check" class="w-3.5 h-3.5 mr-1.5"></i> +67% Lift in Mobile Revenue</li>
+                                <li class="flex items-center text-emerald-300 font-semibold"><i data-lucide="zap" class="w-3.5 h-3.5 mr-1.5"></i> Google PageSpeed score jumped from 43 to 89</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Logos / Badges -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xs uppercase tracking-widest text-slate-400 font-mono mb-8">Integrated Ecosystem & Technologies</h3>
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-slate-300 hover:text-white transition-colors">Google Tag Manager (Web & Server)</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-amber-300 hover:text-amber-200 transition-colors">Cloudflare Workers & DNS</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">Meta Conversions API (CAPI)</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">Google Ads Offline (OCT)</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-orange-400 hover:text-orange-300 transition-colors">Google Analytics 4 (GA4)</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-slate-300 hover:text-white transition-colors">Stape.io / GCP App Engine</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-orange-500 hover:text-orange-400 transition-colors">HubSpot & Salesforce CRM</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">Microsoft Clarity & Hotjar</span>
+                <span class="px-4 py-2.5 rounded-xl bg-dark-card border border-dark-border text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors">BigQuery Analytics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive FAQ Section -->
+    <section class="py-20 bg-dark-900/60 border-t border-dark-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs uppercase tracking-widest text-brand-400 font-mono font-semibold">Client Questions</span>
+                <h2 class="text-3xl font-extrabold text-white mt-2">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="p-5 rounded-xl bg-dark-card border border-dark-border">
+                    <h3 class="text-base font-bold text-white mb-2">Why do I need Cloudflare with Server-Side GTM?</h3>
+                    <p class="text-sm text-slate-400">
+                        While standard sGTM hosted on Google Cloud or Stape routes data through a server, ad-blockers and privacy browsers can still block the initial call if the domain isn't fully disguised. Cloudflare lets us proxy requests via custom workers, obfuscate script names, and bypass DNS-based blockers 100% while setting real HTTP-only cookies that evade Apple's Safari 7-day expiration.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-dark-card border border-dark-border">
+                    <div class="w-full text-base font-bold text-white mb-2">What is Google Ads Offline Conversion Tracking (OCT) and why does it matter?</div>
+                    <p class="text-sm text-slate-400">
+                        Instead of optimizing your campaigns for superficial form fills (which often brings tire-kickers or spam), OCT pushes verified sales from your CRM or backend back to Google Ads with the visitor's GCLID or hashed user details. This trains Google Smart Bidding to find more high-value buyers rather than just clickers.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-xl bg-dark-card border border-dark-border">
+                    <h3 class="text-base font-bold text-white mb-2">How long does a full setup take?</h3>
+                    <p class="text-sm text-slate-400">
+                        A complete turnkey setup (Cloudflare Custom Proxy + sGTM Server Container + GA4 + Meta CAPI + Offline Conversion Pipeline + Deduplication Verification) typically takes 3 to 5 business days, including rigorous QA testing in Google Tag Manager preview mode and Meta Events Manager.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Form -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-b from-dark-card to-dark-900 border border-brand-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                
+                <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs uppercase tracking-widest text-brand-400 font-mono font-semibold">Ready to scale</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Claim Your Free Tracking & CRO Audit</h2>
+                    <p class="mt-3 text-slate-400 text-sm sm:text-base">
+                        Send me your store or website link. I'll inspect your data layer, ad-block resilience, cookie longevity, and checkout bottlenecks, and deliver a personalized Loom video breakdown.
+                    </p>
+                </div>
+
+                <form class="max-w-xl mx-auto space-y-4" onsubmit="event.preventDefault(); alert('Audit request received! I will review your website and tracking setup shortly.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-mono text-slate-400 mb-1.5">Your Name</label>
+                            <input type="text" required placeholder="Alex Mercer" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-slate-400 mb-1.5">Your Email</label>
+                            <input type="email" required placeholder="alex@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1.5">Website or Store URL</label>
+                        <input type="url" required placeholder="https://yourbrand.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-mono text-slate-400 mb-1.5">Primary Focus / Pain Point</label>
+                        <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-sm focus:outline-none focus:border-brand-500 transition-colors">
+                            <option>Server-Side Tracking + Cloudflare Proxy Setup</option>
+                            <option>Google Ads Offline Conversion Tracking (OCT) with CRM</option>
+                            <option>Full Conversion Rate Optimization (CRO) & Funnel Audit</option>
+                            <option>All of the above (Complete Data & Growth Architecture)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-brand-600 to-blue-500 hover:from-brand-500 hover:to-blue-400 shadow-xl shadow-brand-600/30 transition-all flex items-center justify-center space-x-2 text-sm sm:text-base mt-2">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span>Request Free 15-Min Audit & Roadmap</span>
+                    </button>
+                    
+                    <p class="text-center text-xs text-slate-500 mt-3 font-mono">No obligation. 100% technical insights tailored to your business.</p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-dark-border text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Available for high-impact tracking & CRO consulting</span>
+            </div>
+            <div>
+                © 2026 TrackingArchitect. All rights reserved. Precision Analytics & Engineering.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
